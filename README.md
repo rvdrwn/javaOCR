@@ -1,4 +1,4 @@
 javaOCR
 ============
 
-javaOCR is a Javanese script transliteration GUI based on C++ and uses a modified Tesseract engine.
+javaOCR is a Javanese script transliteration GUI based on Python3 and uses a Convolutional Neural Network.
