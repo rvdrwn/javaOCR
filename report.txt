@@ -1,0 +1,78 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: 2_dataset_train__.py
+--------------------------------------------------------------------------------
+2_dataset_train__.py:95:9: ERROR: Using member tf.contrib.layers.flatten in deprecated module tf.contrib. tf.contrib.layers.flatten cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+2_dataset_train__.py:186:2: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file '2_dataset_train__.py'
+ outputting to '2_dataset_train_final_2.py'
+--------------------------------------------------------------------------------
+
+62:66: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+63:67: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+74:67: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+75:63: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+75:63: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+77:9: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+81:9: INFO: Added keywords to args of function 'tf.nn.max_pool'
+81:9: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+81:9: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+85:69: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+86:64: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+86:64: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+88:9: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+92:9: INFO: Added keywords to args of function 'tf.nn.max_pool'
+92:9: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+92:9: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+95:9: ERROR: Using member tf.contrib.layers.flatten in deprecated module tf.contrib. tf.contrib.layers.flatten cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+98:92: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+99:64: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+99:64: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+100:29: INFO: Renamed 'tf.matrix_transpose' to 'tf.linalg.matrix_transpose'
+104:67: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+105:64: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+105:64: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+106:14: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+111:65: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+112:63: INFO: tf.zeros_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+112:63: INFO: Renamed 'tf.zeros_initializer' to 'tf.compat.v1.zeros_initializer'
+113:14: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+117:9: INFO: Renamed 'tf.matrix_transpose' to 'tf.linalg.matrix_transpose'
+122:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+122:26: INFO: Renamed 'tf.nn.softmax_cross_entropy_with_logits_v2' to 'tf.nn.softmax_cross_entropy_with_logits'
+142:13: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+144:8: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+148:16: INFO: Added keywords to args of function 'tf.argmax'
+149:16: INFO: Added keywords to args of function 'tf.argmax'
+152:12: INFO: Added keywords to args of function 'tf.reduce_mean'
+154:6: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+185:10: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+186:2: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+188:15: INFO: Added keywords to args of function 'tf.argmax'
+189:44: INFO: Added keywords to args of function 'tf.argmax'
+191:13: INFO: Added keywords to args of function 'tf.reduce_mean'
+--------------------------------------------------------------------------------
+
